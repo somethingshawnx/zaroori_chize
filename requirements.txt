@@ -1,0 +1,13 @@
+crewai
+langchain
+langchain-community
+langchain-groq
+pinecone-client
+fastapi
+uvicorn
+streamlit
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+python-dotenv
+pydantic

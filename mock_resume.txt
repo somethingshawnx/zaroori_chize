@@ -1,0 +1,13 @@
+# John Doe
+Software Engineer with 5 years of experience in Python, FastAPI, and React.
+Passionate about building scalable AI agents and automating daily workflows.
+
+## Experience
+- Senior Backend Developer at TechCorp (2020-Present)
+  - Built microservices using Python and Docker.
+  - Integrated LLMs into the customer support pipeline.
+- Junior Developer at WebSoft (2018-2020)
+  - Developed full-stack web applications using React and Node.js.
+
+## Education
+- B.S. in Computer Science, University of Technology (2014-2018)
