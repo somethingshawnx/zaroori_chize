@@ -54,11 +54,17 @@ def get_google_services():
         print(f"An error occurred in getting Google services: {error}")
         return None, None
 
+from pydantic import Field, BaseModel
+
+class GoogleToolSchema(BaseModel):
+    query: str = Field(description="A descriptive query or generic keyword, e.g., 'emails' or 'calendar events'. Never leave this empty.")
+
 class GmailReadTool(BaseTool):
     name: str = "Read Unread Emails"
     description: str = "Fetches the latest unread emails from the user's Gmail inbox. Useful for summarize the daily emails."
+    args_schema: type[BaseModel] = GoogleToolSchema
 
-    def _run(self) -> str:
+    def _run(self, query: str = "") -> str:
         try:
             gmail_service, _ = get_google_services()
             if not gmail_service:
@@ -89,8 +95,9 @@ class GmailReadTool(BaseTool):
 class CalendarReadTool(BaseTool):
     name: str = "Read Upcoming Events"
     description: str = "Fetches the upcoming events from the user's Google Calendar. Useful for planning the day."
+    args_schema: type[BaseModel] = GoogleToolSchema
 
-    def _run(self) -> str:
+    def _run(self, query: str = "") -> str:
         try:
             _, calendar_service = get_google_services()
             if not calendar_service:

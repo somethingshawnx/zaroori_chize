@@ -48,13 +48,17 @@ with st.sidebar:
         
     st.markdown("---")
     st.subheader("Active Agents")
-    st.markdown("- **Task Manager Agent**: Prioritizes and structures work.")
-    st.markdown("- **Research Analyst Agent**: Finds and summarizes information from the web.")
+    st.markdown("- **Executive Assistant**: Synthesizes daily briefings.")
+    st.markdown("- **Email Monitor**: Reads and manages Gmail.")
+    st.markdown("- **Schedule Manager**: Monitors Calendar events.")
+    st.markdown("- **Task Manager**: Prioritizes general work.")
+    st.markdown("- **Research Analyst**: Finds web information.")
     
     st.markdown("---")
     st.subheader("Infrastructure")
-    st.markdown("- **LLM**: Llama 3 (via Groq Free Tier)")
-    st.markdown("- **Memory**: Pinecone Serverless (Free Tier)")
+    st.markdown("- **LLM**: Llama 3 (via Groq)")
+    st.markdown("- **Memory**: Local ChromaDB (RAG)")
+    st.markdown("- **Integrations**: Google APIs")
     st.markdown("- **Orchestration**: CrewAI")
 
 # Session State for Chat History
